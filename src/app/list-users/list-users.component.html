@@ -1,0 +1,42 @@
+<!-- <p>Welcome {{myName}}</p> -->
+<div class="search-user">
+  <a id="btn-search" class="btn-search" *ngIf="!showS">
+    <i id="fa-search" class="fas fa-search" (click)="show()"></i>
+  </a>
+  <div *ngIf="showS">
+    <input class="in-search" id="in-search" type="search" [(ngModel)]="keyword" name="keyword" placeholder="Enter name" (keyup.enter)="search()">
+    <i class="fa fa-window-close" aria-hidden="true" (click)="hide()"></i>
+  </div>
+</div>
+
+<div class="container">
+  <h2>LIST USERS</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <!-- <th>ID</th> -->
+        <th>Name</th>
+        <th>Email</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <!-- <td>{{user._id}}</td> -->
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          <a class="icon" (click)="deleteUser(user._id)">
+            <i class="far fa-trash-alt"></i>
+          </a>
+          <a class="icon" [routerLink]="['/listusers/updateinfo', user._id]">
+            <i class="fas fa-pen"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="logout">
+    <a (click)="logout()">Logout</a>
+  </div>
+</div>

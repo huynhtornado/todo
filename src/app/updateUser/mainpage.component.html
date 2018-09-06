@@ -1,0 +1,31 @@
+<div class="form-update">
+    <div class="contact100-form-title" style="background-image: url(../../assets/imageUpdate.jpg);">
+        <span class="form-title-1">
+            UPDATE USER
+        </span>
+    </div>
+    <form #formUpdate="ngForm" (ngSubmit)="updateUser(formUpdate.value)" class="form-u"><!---#updateForm="ngForm" -->
+        <div class="wrap-input">
+            <span class="label-input" style="font-size: 18px;">Name:</span>
+            <input class="input100" type="text" name="name" placeholder="Enter full name" ngModel>
+        </div>
+
+        <div class="wrap-input">
+            <span class="label-input" style="font-size: 18px;">Email:</span>
+            <input class="input100" type="text" name="email" placeholder="Enter email" ngModel>
+        </div>
+
+        <!-- <div class="wrap-input">
+            <span class="label-input">Password:</span>
+            <input class="input100" type="password" name="password" placeholder="Enter phone number" ngModel>
+        </div> -->
+
+        <div class="container-contact100-form-btn">
+            <button class="form-btn" type="submit">
+                <span>
+                    Save
+                </span>
+            </button>
+        </div>
+    </form>
+</div>

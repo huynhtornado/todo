@@ -1,0 +1,66 @@
+<div class="register">
+  <form [formGroup]="formRegister" (ngSubmit)="register(formGroup)">
+    <div class="form-login">Register Account</div>
+    <div class="user-in">
+      <div class="e-label">
+        <label>Email
+          <span> *</span>
+        </label>
+      </div>
+      <div class="e-input">
+        <input type="text" name="email" id="email" placeholder="Enter your email" [formControl]="email">
+      </div>
+    </div>
+
+    <div class="vali-email" [hidden]="email.valid || email.untouched">
+      <div [hidden]="!email.hasError('required')" class="vali-cont">
+        Email is required
+      </div>
+    </div>
+
+    <div class="pass-in">
+      <div class="e-label">
+        <label>Password
+          <span> *</span>
+        </label>
+      </div>
+      <div class="e-input">
+        <input type="password" name="password" id="password" placeholder="Enter your password" [formControl]="password">
+      </div>
+    </div>
+
+    <div class="vali-pass" [hidden]="password.valid || password.untouched">
+      <div [hidden]="!password.hasError('minlength')" class="vali-cont">
+        Password can not be shorter than 5 characters.
+      </div>
+      <div [hidden]="!password.hasError('required')" class="vali-cont">
+        Password is required.
+      </div>
+    </div>
+
+    <div class="pass-in">
+      <div class="e-label">
+        <label>Name
+          <span> *</span>
+        </label>
+      </div>
+      <div class="e-input">
+        <input type="text" name="name" id="name" placeholder="Enter your name" [formControl]="name">
+      </div>
+    </div>
+
+    <div class="vali-name" [hidden]="name.valid || name.untouched">
+      <div [hidden]="!name.hasError('minlength')" class="vali-cont">
+        Name can not be shorter than 3 characters.
+      </div>
+      <div [hidden]="!name.hasError('required')" class="vali-cont">
+        Name is required
+      </div>
+    </div>
+
+    <div class="place-sub">
+      <input class="sub-login" type="submit" value="Register">
+      <input class="sub-reset" type="reset" value="reset">
+    </div>
+  </form>
+</div>

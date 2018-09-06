@@ -1,0 +1,31 @@
+<div class="form-container">
+  <form #formlogin="ngForm" (ngSubmit)="userLogin(formlogin.value)">
+    <div class="form-login">Login</div>
+    <div class="user-in">
+      <div class="e-label">
+        <label>Email <!--lnvtphu@tma.com.vn-->
+          <span> *</span>
+        </label>
+      </div>
+      <div class="e-input">
+        <input type="text" name="email" placeholder="Enter your email" ngModel>
+      </div>
+    </div>
+    <div class="pass-in">
+      <div class="e-label">
+        <label>Password <!--123456-->
+          <span> *</span>
+        </label>
+      </div>
+      <div class="e-input">
+        <input type="password" name="password" placeholder="Enter your password" ngModel>
+      </div>
+    </div>
+    <div class="place-sub">
+      <input class="sub-login" type="submit" value="Login">
+      <input class="sub-reset" type="reset" value="reset">
+    </div>
+  </form>
+</div>
+<!-- (click)="clickName(formlogin.value)" -->
+<!-- <app-list-users [myName]="uSer.name"></app-list-users>   -->

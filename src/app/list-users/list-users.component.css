@@ -1,0 +1,90 @@
+.icon{
+    margin-left: 12px;
+}
+.icon i:hover {
+    cursor: pointer;
+    transform:scale(1.25);
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);  
+}
+.fa-pen{
+    color: #103ea7;
+}
+
+.logout{
+    width: 80px;
+    height: 35px;
+    background-color: red;
+    color: white;
+    position: relative;
+    z-index: 500;
+    left: 93%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.logout:hover{
+    background-color: green;
+}
+
+.search-user{
+    width: 80px;
+    height: 35px;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    right: 36em;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input{
+    outline: none;
+}
+
+input[type="search"]:focus{
+    background-color: #fff;
+    border-color: #66CC75;
+    box-shadow: 0 0 7px rgba(109,207,246,.5);
+}
+
+.search-user input{
+    position: absolute;
+    z-index: 222;
+    left: -3.8em;
+    top: 0px;
+    border-radius: 5px;
+    width: 20em; 
+    padding: 4px 0px 4px 0;
+    border: 1px #cccccc solid;
+    padding-left: 12px;
+}
+
+.fa-search{
+    position: absolute;
+    z-index: 1000;
+    top: 7px;
+    color: black;
+    left: 12em;
+    font-size: 20px;
+}
+
+.fa-window-close{
+    position: absolute;
+    z-index: 1000;
+    top: 7px;
+    color: #e47f7f;
+    left: 11.5em;
+    font-size: 20px;    
+}
+
+.far{
+    color: red;
+}

@@ -1,0 +1,127 @@
+.register{
+    text-align: center;
+    width: 435px;
+    height: 405px;
+    border: 1px snow solid;
+    border-radius: 6px;
+    background-color: aliceblue;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7)
+}
+
+.form-login{
+    padding-top: 20px;
+    text-align: center;
+    font-family: serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #bb8c01;
+    font-weight: bold;
+}
+input[type=text] {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=password] {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.user-in{
+    padding-top: 2em;
+    width: 100%;
+}
+
+.form-container label{
+    font-size: 1.4em;
+    float: left;
+}
+
+.e-label {
+    width: 30%;
+    float: left;
+    padding-left: 20px;
+}
+
+.e-label label{
+    padding: 12px;
+    font-size: 17px;
+    float: left;
+}
+
+.e-input{
+    width: 70%;
+    float: left;
+}
+.user-in span{
+    color: red;
+}
+
+.p-label {
+    width: 25%;
+    float: left;
+}
+.pass-in{
+    padding-top: 5.2em;
+    width: 100%;
+}
+
+.pass-in span{
+    color: red;
+}
+
+.sub-login{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.sub-reset {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: -179px;
+}
+.place-sub{
+    width: 100%;
+}
+.place-sub{
+    padding-top: 5.2em;
+}
+.place-sub .sub-login{
+    margin-right: 0.5em;
+}
+
+.place-sub input:hover {
+    background-color: cornflowerblue;
+}
+
+/*--------------*/
+.vali-email{
+    float: left;
+    width: 100%;
+    color: red;
+}
+.vali-pass{
+    float: left;
+    width: 100%;
+    color: red;
+}
+.vali-name{
+    float: left;
+    width: 100%;
+    color: red;
+}
+.vali-cont{
+    padding-left: 31px;
+}

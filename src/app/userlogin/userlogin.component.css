@@ -1,0 +1,134 @@
+.form-container{
+    text-align: center;
+    width: 435px;
+    height: 330px;
+    border: 1px snow solid;
+    border-radius: 6px;
+    background-color: aliceblue;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+}
+.form-login{
+    padding-top: 20px;
+    text-align: center;
+    font-family: serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+input[type=text] {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=password] {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.user-in{
+    padding-top: 2em;
+    width: 100%;
+}
+
+.form-container label{
+    font-size: 17px;
+    float: left;
+    padding-top: 8px;
+    padding-left: 20px;
+}
+
+.e-label {
+    width: 30%;
+    float: left;
+    padding-left: 20px;
+}
+
+.e-input{
+    width: 70%;
+    float: left;
+}
+.user-in span{
+    color: red;
+}
+
+.p-label {
+    width: 25%;
+    float: left;
+}
+.pass-in{
+    padding-top: 5em;
+    width: 100%;
+}
+
+.pass-in span{
+    color: red;
+}
+
+.sub-login{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.sub-reset {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: -212px;
+}
+.place-sub{
+    width: 100%;
+}
+.place-sub{
+    padding-top: 5em;
+}
+.place-sub .sub-login{
+    margin-right: 0.5em;
+}
+
+.place-sub input:hover {
+    background-color: cornflowerblue;
+}
+
+/*-------validation--------------*/
+.valid-user{
+    width: 185px;
+    height: 55px;
+    background-color: lightcoral;
+    color: white;
+    position: relative;
+    z-index: 1000;
+    right: -22.5em;
+    top: -5em;
+}
+
+.arrow{
+    /* float: left;
+    width: 50px;
+    height: 55px;
+    background-color: white;
+    border-top-left-radius: 100px; */
+    float: left;
+    border-color: transparent;
+    border-bottom-color: #34ee05;
+    border-right-color: #34ee05;
+    border-style: dashed dashed solid;
+    border-width: 0 8.5px 8.5px;
+    height: 0;
+    width: 0;
+    -webkit-animation: gb__a .2s;
+    animation: gb__a .2s
+}
+
+.message{
+    float: left;
+}

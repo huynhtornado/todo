@@ -1,0 +1,24 @@
+<div class="main-dashboard">
+  <div class="icon-menu">
+    <i id="fas" class="fas fa-align-justify" (click)="show()"></i>
+  </div>
+  <div id="list-menu" style="display: none;" class="list-menu">
+    <div class="title-menu">
+      <p class="cap-menu" style="font-size: 17px; font-weight: bold;">MENU</p><i id="fa-backspace" class="fas fa-backspace"
+        (click)="hide()"></i></div>
+    <ul class="item-list">
+      <a routerLink="login"><li><i class="fas fa-angle-double-right"></i><span>Login</span></li></a>
+      <a routerLink="register"><li><i class="fas fa-angle-double-right"></i><span>Register</span></li></a>
+    </ul>
+  </div>
+  <div class="dashboard">
+    <div class="cen-dash">
+      <a routerLink="register">
+        <p class="btn-box "><label>Register</label></p>
+      </a>
+      <a routerLink="login">
+        <p class="btn-box"><label>Login</label></p>
+      </a>
+    </div>
+  </div>
+</div>
