@@ -14,47 +14,34 @@ export class UserloginComponent implements OnInit {
 
   uSer: users;
 
-  public myName;
+  myName: string;
+
   constructor(public userService: UserService) { }
 
   getAllUsers() {
     return this.userService.getAllUsers().subscribe(user => { this.users = user });
   }
 
-  @HostListener('submit')
-  userLogin(user: users): any {
+
+  userLogin(user: users) {
     return this.userService.userLogin(user).subscribe(
       userr => {
-        this.uSer = userr.user;
-        this.myName = userr.user.name;   
-        this.userService.toggle(this.myName);
-        // this.myName = new users(userr.user._id, userr.user.name, userr.user.email, userr.user.password);
+        //this.uSer = userr.user;
+        this.myName = userr.user.name;
+        //this.userService.toggle(this.myName);
         console.log("Set name is:" + this.myName);
-        // this.clickName(this.myName);
+        // this.getMyName(this.myName);
       });
   }
 
-  // @Input() state: boolean;
-
-  // @Output() change = new EventEmitter();
-  // clickName(myName) {
-  //   this.userService.toggle(myName);
-  //   //console.log('toggle started');
-  //   // this.state = true;
-  //   // this.change.emit(this.state);
-  //   // console.log("state is " + this.state);
-  // }
-
-  // getEmittedValue(): any{
-  //   return this.change;
-  // }
-
-  // subToggle() {
-  //   this.clickName();
-  // }
+  getMyName(user: users) {
+    return this.userService.userLogin(user).subscribe(
+      userr => {
+        this.myName = userr.user.name;
+        this.userService.getMyName(this.myName);
+      });
+  }
 
   ngOnInit() {
-    //console.log(this.myName);
-
   }
 }

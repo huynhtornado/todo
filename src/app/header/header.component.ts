@@ -11,14 +11,14 @@ export class HeaderComponent implements OnInit {
 
   logged: boolean = true;
 
-  myName: string;
+  name: String;
 
   constructor(private userService: UserService) {
   }
 
   ngOnInit() {
-    this.userService.change.subscribe(myName => {
-      this.myName = myName;
+    this.userService.getName.subscribe(myName => {
+      this.name = myName;
     });
   }
 

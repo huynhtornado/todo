@@ -1,7 +1,7 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { users } from './users';
 import { Router } from '@angular/router';
-import { Observable, of, Observer } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -25,13 +25,13 @@ export class UserService {
 
   user: users[];
 
+  @Output() getName = new EventEmitter<string>();
+
   constructor(private http: HttpClient, private router: Router) {
   }
 
-  @Output() change: EventEmitter<string> = new EventEmitter();
-
-  toggle(myName: string) {
-    this.change.emit(myName);
+  getMyName(myName) {
+    this.getName.emit(myName);
   }
 
   getAllUsers(): Observable<any> {
